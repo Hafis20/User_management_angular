@@ -1,0 +1,15 @@
+<div class="main-container">
+   <div class="w-1/2 h-96 bg-blue-400 rounded-md font-mono justify-start">
+      <div class="img-div w-full h-36">
+         <img [src]="userImage" class="profile-img rounded-full">
+      </div>
+      <div class="mt-5">
+         <p class="text-3xl">Name: {{userData.name}}</p>
+         <p class="text-2xl">Email: {{userData.email}}</p>
+      </div>
+      <button (click)="uploadClicked()" class="px-10 py-2 bg-pink-600 text-white rounded-xl">Change Profile</button>
+      <form class="mt-2" *ngIf="showUploadBox">
+         <input class="bg-blue-600 rounded-full"  type="file" (change)="UploadImage($event)">
+      </form>
+   </div>
+</div>

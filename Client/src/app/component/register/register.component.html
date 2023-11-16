@@ -1,0 +1,49 @@
+<form [formGroup]="registerForm" (ngSubmit)="proceedRegister()">
+   <mat-card>
+      <mat-card-header>
+         <h1>User Registration</h1>
+      </mat-card-header>
+      <mat-card-content>
+         <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+         </mat-form-field>
+
+         <mat-form-field class="mat-50">
+            <mat-label>Email</mat-label>
+            <input (blur)="duplicateUserFtn()" matInput formControlName="email">
+         </mat-form-field>
+
+         <mat-form-field class="mat-50">
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="phone">
+         </mat-form-field>
+
+         <mat-form-field class="mat-50">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password">
+         </mat-form-field>
+
+         <mat-form-field  class="mat-50">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput formControlName="confirmpassword" type="password">
+         </mat-form-field>
+
+         <div class="div-50">
+            <mat-radio-group formControlName="gender">
+               <mat-radio-button color="primary" value="male">Male</mat-radio-button>
+               <mat-radio-button color="primary" value="female">Female</mat-radio-button>
+               <mat-radio-button color="primary" value="others">Others</mat-radio-button>
+             </mat-radio-group>
+         </div>
+      </mat-card-content>
+      <mat-card-actions>
+         <div class="div-50">
+            <button type="submit" color="primary" mat-raised-button>Register</button>
+         </div>
+         <div class="div-50">
+            <a routerLink="/login" color="accent" mat-raised-button>Back to Login</a>
+         </div>
+      </mat-card-actions>
+   </mat-card>
+</form>

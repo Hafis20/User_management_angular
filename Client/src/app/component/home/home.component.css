@@ -1,0 +1,17 @@
+.main-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 550px;
+}
+
+.img-div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.profile-img{
+   height:100px;
+   width: 100px;
+}

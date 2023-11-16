@@ -1,0 +1,13 @@
+.mdc-card{
+   margin: 2%;
+}
+
+button{
+   margin: 2px;
+}
+
+.search-div{
+   display: flex;
+   float: right;
+   justify-content: end;
+}
